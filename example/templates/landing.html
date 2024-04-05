@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles1.css') }}">
+</head>
+<body>
+
+<main>
+    <h1>Welcome to <span>Image Revitalization Page</span></h1>
+    <div class="center-align">
+        <section id="landing-section">
+            
+            <p>Every tool you need to work with Image Restoration in one place<br>
+                Every tool you need to use Restorations at your fingertips. All are <span>100% FREE </span>and easy to use! Colorising,Denoising,Increasing Super Resolution with just a few Clicks</p>
+            <h2>READY TO GET STARTED?</h2>
+            <button id="startBtn">Let's Start</button>
+        </section>
+    </div>
+</main>
+
+<script>
+    document.getElementById('startBtn').addEventListener('click', function() {
+        window.location.href = '/project'; // Redirect to your project webpage
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Restoration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<header>
+    <div style="padding: 20px 0;">
+        <h1>Image Revitalization Main Page</h1>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <section id="upload-section">
+            <h5>Restore Image File</h5>
+            <h2>Restore old images to their former glory with our innovative image restoration feature, transforming aging photos into vibrant, pristine snapshots of the past. Effortlessly revitalize cherished memories with just a click, bringing new life to your cherished photographs.</h2>
+            <button id="uploadBtn">Select Image File</button>
+            <p>Accepted Image Format: <span>Png, Jpg, and Jpeg</span></p>
+            <input type="file" id="fileInput" accept=".jpg, .jpeg, .png">
+        </section>
+
+        <section id="img-section" style="display: none;">
+            <img id="uploadedImage" src="#" alt="Uploaded Image" style="width: 600px; height: 400px; border: 2px solid #4CAF50; border-radius: 10px;"
+            >
+        </section>
+
+        <section id="features-section" style="display: none;">
+            <h5 style="margin-bottom: 30px;margin-top: 30px;">RESTORATION FEATURES</h5>
+            <button class="featureBtn" data-feature="colorization">Colorization</button>
+            <button class="featureBtn" data-feature="blur_removal">Blur Removal</button>
+            <button class="featureBtn" data-feature="super_resolution">Super Resolution</button>
+            <button id="convertBtn" style="display: none;">Convert Image ->></button>
+        </section>
+    </div>
+</main>
+
+<section id="output-section" style="display: none;">
+    <div class="imageDiv">
+        <h5>Output Image</h5>
+        <img id="outputImage" src="" alt="Output Image" style="width: 600px; height: 400px; border: 2px solid #4CAF50; border-radius: 10px;">
+    </div>
+    <div id="downloadBtnDiv" class="imageDiv">
+        <button id="downloadBtn" style="display: none;">Download Image</button>
+    </div>
+</section>
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
